@@ -3,7 +3,11 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'source ~/.bashrc && echo $PATH'
+        sh 'source ~/.bashrc && mvn clean package'
+      }
+
+      post {
+        archiveArtifacts artifacts: "**/target/*.war"
       }
 
     }
