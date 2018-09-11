@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo $PATH'
-        sh 'whoami'
+        sh 'source ~/.bashrc && echo $PATH'
       }
 
     }
