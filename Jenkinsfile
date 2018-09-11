@@ -7,11 +7,11 @@ pipeline {
       }
 
       post {
-        archiveArtifacts artifacts: "**/target/*.war"
+        success {
+          echo "Now archiving..."
+          archiveArtifacts artifacts: "**/target/*.war"
+        }
       }
-
     }
-
   }
-
 }
