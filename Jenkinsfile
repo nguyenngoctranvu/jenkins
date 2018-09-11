@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Build'){
             steps {
-                sh 'export ~/.bashrc && mvn clean package'
+                sh 'source ~/.bashrc && mvn clean package'
             }
             post {
                 success {
